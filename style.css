@@ -1,0 +1,220 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family:sans-serif;
+    font-size: 14px
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-image:url(./background-image.jpg);
+    background-size: 100%;
+    background-repeat:repeat;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.instagram-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content:start;
+    width: 60%;
+    height:100vh;
+}
+
+/* TELEFONE */
+
+.instagram-phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.instagram-phone img {
+    height: 50rem;
+}
+
+/* BOX 1 */
+
+.instagram-continue {
+    display: flex;
+    flex-direction: column; /* foi mudado a direção do flex, o eixo, de linha pra coluna */
+    align-items: center; /* alinhado na horizontal */
+    justify-content:space-around; /* alinhado na vertical */
+    width: 40%;
+    min-height: 35rem;
+    margin-top: 4rem;
+    border-color: transparent;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    padding: 1.3rem 0;
+    border: 1px solid lightgray;
+}
+
+.group:nth-child(1) {
+    min-height: 15rem;
+    margin-bottom: 5px;
+    padding: 2rem;
+}
+
+.instagram-logo {
+    height: 3rem;
+}  
+
+/* FOTO DE PERFIL */
+.profile-photo {
+    display:flex;
+    background-image: url(./profile-picture.png);
+    background-position: center;
+    align-items:center;
+    padding:0;
+    border-radius: 100%;
+    width:8rem;
+    height:8rem;
+    margin: 1rem;
+     
+}
+.profile-photo:hover {
+    background-image: url(./ProfileAnimatedGoku.gif);
+    cursor: pointer;
+    background-repeat: no-repeat;
+    justify-content:center;
+}
+
+/* BOTÃO DE LOGIN */
+
+#button-login {
+    background-color: rgb(235, 103, 8);
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px orange, 0 0 5px orangered;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    transition: 0.25s;    
+}
+
+#button-login:hover,
+#button-login:focus {
+  box-shadow: 0 12px 16px 0 yellow, 0 17px 50px 0 yellow var(--hover);
+  transform: translateY(-0.25em);
+  transition: 0.25s;
+  cursor: pointer;
+  
+}
+
+/* BOTÃO DE LOGOUT */
+
+.button-logout {
+    color: #0095f6;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/*ALTERNAR CONTAS E INSCREVA-SE */
+
+.not-account {
+    color: rgb(160, 160, 160);
+}
+
+
+.link-blue {
+    color: #0095f6;
+}
+
+/* DOWNLOAD DO APP */
+
+.app-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+    margin-top: 4rem;
+    width: 100%;
+    padding: 0.5rem;
+    
+}
+
+.downloadappnow {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content:space-evenly;
+    margin-bottom: 0.5rem;
+    color:lightgray;
+    text-shadow: 1px 1px grey;
+}
+
+.downloadlist {
+    display:flex;
+    width: 100%;
+    align-items: center;
+    justify-content:space-around;
+}
+
+.app-download {
+    height: 3rem;
+    width: 10rem;
+    background-size: contain;
+    margin: 0.5rem;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+/* APP STORE */
+
+.app-download:nth-child(1){
+    background-image: url(./apple-button.png);
+    background-repeat: no-repeat;
+    justify-content:center;
+    
+}
+
+/* GOOGLE PLAY */
+
+.app-download:nth-child(2) {
+    background-image: url(./googleplay-button.png);
+    background-repeat: no-repeat;
+    justify-content:center;
+}
+
+/* media queries */
+
+@media (max-width: 1024px) {
+    .instagram-wrapper {
+        width: 90%;
+    }
+}
+
+@media (max-width: 650px){
+
+    body {
+        background-color: white;
+    }
+    .instagram-wrapper {
+        width: 90%;
+    }
+
+    .instagram-phone {
+        display:none;
+    }
+
+    .instagram-continue {
+        width:100%;
+    }
+    .group {
+        border: 1px solid transparent;
+    }
+}
